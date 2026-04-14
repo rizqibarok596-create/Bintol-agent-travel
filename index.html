@@ -128,6 +128,8 @@
             width: 90%;
             max-width: 700px;
             position: relative;
+            max-height: 90vh; /* Agar bisa discroll jika kepanjangan */
+            overflow-y: auto;
         }
         .close {
             position: absolute;
@@ -137,6 +139,13 @@
             font-weight: bold;
             color: #aaa;
             cursor: pointer;
+            background: white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .close:hover {
             color: black;
@@ -185,7 +194,7 @@
         <div class="grid">
             
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=600&q=80" alt="Banda Neira Maluku">
+                <img src="banda-neira.jpg" alt="Banda Neira Maluku">
                 <div class="card-content">
                     <h3>Banda Neira 4H4M</h3>
                     <p>Melarikan diri sejenak ke kepingan surga sejarah di Timur Indonesia.</p>
@@ -194,7 +203,7 @@
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1518182170546-076616fdcbca?auto=format&fit=crop&w=600&q=80" alt="Desa Wae Rebo Flores">
+                <img src="wae-rebo.jpg" alt="Desa Wae Rebo Flores">
                 <div class="card-content">
                     <h3>Wae Rebo 4H4M</h3>
                     <p>Perjalanan spiritual dan budaya menyatu dengan alam di "Desa Atas Awan".</p>
@@ -203,7 +212,7 @@
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1589182373814-fd81b7dc490e?auto=format&fit=crop&w=600&q=80" alt="Gunung Rinjani Lombok">
+                <img src="rinjani.jpg" alt="Pemandangan Kawah Rinjani saat Matahari Terbit">
                 <div class="card-content">
                     <h3>Ekspedisi Rinjani 4H4M</h3>
                     <p>Taklukkan batas diri dan saksikan mahakarya Sang Pencipta dari ketinggian.</p>
@@ -237,6 +246,8 @@
             <span class="close" onclick="closeModal('modalBanda')">&times;</span>
             <h2>Banda Neira 4H4M</h2>
             <div class="modal-body">
+                <img src="banda-neira.jpg" alt="Banda Neira Maluku" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
+                
                 <p>Pernahkah Anda membayangkan bangun pagi disambut udara segar, laut sebening kristal, dan deretan bangunan kolonial yang menyimpan ribuan cerita? Selama 4 hari 4 malam, kami akan membawa Anda menyelami pesona bawah laut yang tak tertandingi dan menyusuri jejak sejarah rempah dunia.</p>
                 <h3>✨ Benefit yang Anda Dapatkan:</h3>
                 <ul>
@@ -256,6 +267,8 @@
             <span class="close" onclick="closeModal('modalWae')">&times;</span>
             <h2>Wae Rebo 4H4M</h2>
             <div class="modal-body">
+                <img src="wae-rebo.jpg" alt="Desa Wae Rebo Flores" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
+                
                 <p>Tersembunyi di balik pegunungan hijau Flores, Wae Rebo menawarkan ketenangan yang sulit dicari di tempat lain. Hirup udara segar pegunungan, rasakan kehangatan sambutan masyarakat lokal di rumah adat Mbaru Niang, dan nikmati secangkir kopi asli Flores di bawah taburan bintang.</p>
                 <h3>✨ Benefit yang Anda Dapatkan:</h3>
                 <ul>
@@ -264,6 +277,60 @@
                     <li>Local guide ramah & porter barang.</li>
                     <li>Upacara Adat Waelu.</li>
                     <li>Konsumsi lezat selama di desa dan air mineral tak terbatas.</li>
+                </ul>
+                <a href="https://wa.me/6281234567890?text=Halo%20Bintol%20Travel,%20saya%20tertarik%20dengan%20paket%20Wae%20Rebo%204H4M." target="_blank" class="btn btn-wa">Tanya Jadwal & Booking via WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalRinjani" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalRinjani')">&times;</span>
+            <h2>Ekspedisi Rinjani 4H4M</h2>
+            <div class="modal-body">
+                <img src="rinjani.jpg" alt="Pemandangan Kawah Rinjani saat Matahari Terbit" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
+                
+                <p>Bersama tim profesional kami, wujudkan impian menjejakkan kaki di 3.726 mdpl tanpa pusing memikirkan logistik. Fokus pada langkah dan keindahan alamnya; biarkan kami yang mengurus tenda, makanan hangat, dan kenyamanan Anda di atas awan.</p>
+                
+                <h3>✨ Benefit yang Anda Dapatkan:</h3>
+                <ul>
+                    <li>Fasilitas Glamping (Tenda double layer, sleeping bag, matras).</li>
+                    <li>Pemandu gunung bersertifikat & tim porter.</li>
+                    <li>3x makan sehari (menu bergizi, buah, camilan di gunung).</li>
+                    <li>1 Malam penginapan transisi di Sembalun/Senaru.</li>
+                    <li>Tiket TNGR, asuransi, dan perlengkapan P3K.</li>
+                </ul>
+                <a href="https://wa.me/6281234567890?text=Halo%20Bintol%20Travel,%20saya%20tertarik%20dengan%20paket%20Rinjani%204H4M." target="_blank" class="btn btn-wa">Tanya Jadwal & Booking via WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/6281234567890" target="_blank" class="float-wa">
+        💬
+    </a>
+
+    <script>
+        // Fungsi untuk membuka modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Fungsi untuk menutup modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Menutup modal jika user mengklik di luar area kotak putih
+        window.onclick = function(event) {
+            if (event.target.classList.contains("modal")) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+erbatas.</li>
                 </ul>
                 <a href="https://wa.me/6281234567890?text=Halo%20Bintol%20Travel,%20saya%20tertarik%20dengan%20paket%20Wae%20Rebo%204H4M." target="_blank" class="btn btn-wa">Tanya Jadwal & Booking via WhatsApp</a>
             </div>
