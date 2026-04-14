@@ -1,331 +1,631 @@
+Edit dengan apl Dokumen
+Membuat penyesuaian, memberi komentar, dan berbagi dengan yang lain agar dapat mengedit secara bersamaan.
+LAIN KALIGUNAKAN APLIKASI
+Bintol Travel Web
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Bintol Travel Agen | Paket Wisata Banda Neira, Wae Rebo & Rinjani</title>
-    <meta name="description" content="Wujudkan liburan impian tanpa ribet bersama Bintol Travel. Temukan paket wisata terbaik ke Banda Neira, Wae Rebo, dan Ekspedisi Gunung Rinjani dengan harga terjangkau.">
-    <meta name="keywords" content="travel agen, paket wisata banda neira, tur wae rebo, pendakian rinjani, bintol travel">
-    
-    <style>
-        /* Desain Bersih & Minimalis (UI/UX) */
-        :root {
-            --primary-color: #007BFF; /* Biru Laut */
-            --bg-color: #f8f9fa;
-            --text-color: #333;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        
-        /* Hero Section / Headline */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1000&q=80') center/cover;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-        }
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- SISTEM SEO -->
+   <title>Bintol Travel Agen | Paket Wisata Eksklusif Banda Neira, Wae Rebo & Rinjani</title>
+   <meta name="description" content="Wujudkan liburan impian tanpa ribet bersama Bintol Travel. Temukan paket wisata terbaik dengan kuota terbatas ke Banda Neira, Wae Rebo, dan Ekspedisi Gunung Rinjani.">
+   <meta name="keywords" content="travel agen, paket wisata banda neira, tur wae rebo, pendakian rinjani, bintol travel, liburan eksklusif">
+   
+   <style>
+       /* Desain Bersih, Modern & Interaktif (UI/UX) */
+       :root {
+           --primary-color: #0056b3; /* Biru Laut Tua (Lebih Elegan) */
+           --accent-color: #ff9800; /* Warna Aksen Oranye untuk Urgency */
+           --bg-color: #f4f7f6;
+           --text-color: #333;
+           --white: #ffffff;
+       }
+       body {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: var(--bg-color);
+           color: var(--text-color);
+           line-height: 1.6;
+       }
+       
+       /* Hero Section / Headline (Background Video Kesan) */
+       .hero {
+           background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80') center/cover fixed;
+           color: var(--white);
+           text-align: center;
+           padding: 120px 20px;
+       }
+       .hero h1 {
+           font-size: 3rem;
+           margin-bottom: 15px;
+           font-weight: 700;
+           letter-spacing: 1px;
+           text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+       }
+       .hero p {
+           font-size: 1.3rem;
+           max-width: 600px;
+           margin: 0 auto;
+           text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+       }
 
-        /* Container & Grid untuk Card */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+       /* Container & Grid untuk Card */
+       .container {
+           max-width: 1100px;
+           margin: 60px auto;
+           padding: 0 20px;
+       }
+       .section-title {
+           text-align: center;
+           margin-bottom: 40px;
+           font-size: 2.2rem;
+           color: #222;
+       }
+       .grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+           gap: 30px;
+       }
 
-        /* Styling Card Destinasi */
-        .card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .card-content {
-            padding: 20px;
-        }
-        .card h3 {
-            margin-top: 0;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-            width: 100%;
-            text-align: center;
-            box-sizing: border-box;
-        }
-        .btn:hover {
-            background: #0056b3;
-        }
+       /* Styling Card Destinasi (Efek Hover Zoom) */
+       .card {
+           background: var(--white);
+           border-radius: 12px;
+           overflow: hidden;
+           box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+           transition: all 0.3s ease;
+           position: relative;
+       }
+       .card:hover {
+           transform: translateY(-8px);
+           box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+       }
+       .card-img-wrapper {
+           overflow: hidden;
+           height: 220px;
+           position: relative;
+       }
+       .card img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           transition: transform 0.5s ease;
+       }
+       .card:hover img {
+           transform: scale(1.08); /* Zoom in saat dihover */
+       }
+       
+       /* Label Urgency */
+       .badge-scarcity {
+           position: absolute;
+           top: 15px;
+           right: 15px;
+           background-color: var(--accent-color);
+           color: white;
+           padding: 5px 12px;
+           border-radius: 20px;
+           font-size: 0.85rem;
+           font-weight: bold;
+           z-index: 2;
+           box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+       }
 
-        /* Review Section */
-        .review-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        .review-item {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            text-align: center;
-            font-style: italic;
-        }
+       .card-content {
+           padding: 25px;
+       }
+       .card h3 {
+           margin-top: 0;
+           font-size: 1.5rem;
+           color: #111;
+       }
+       .card p {
+           color: #555;
+           margin-bottom: 20px;
+       }
+       .btn {
+           display: block;
+           background: var(--primary-color);
+           color: var(--white);
+           padding: 12px 20px;
+           text-decoration: none;
+           border-radius: 6px;
+           cursor: pointer;
+           border: none;
+           font-size: 1rem;
+           font-weight: 600;
+           width: 100%;
+           text-align: center;
+           box-sizing: border-box;
+           transition: background 0.3s ease;
+       }
+       .btn:hover {
+           background: #004494;
+       }
 
-        /* Modal (Pop-up Detail Paket) */
-        .modal {
-            display: none; 
-            position: fixed;
-            z-index: 1000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.6);
-            overflow: auto;
-        }
-        .modal-content {
-            background-color: white;
-            margin: 5% auto;
-            padding: 30px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 700px;
-            position: relative;
-            max-height: 90vh; /* Agar bisa discroll jika kepanjangan */
-            overflow-y: auto;
-        }
-        .close {
-            position: absolute;
-            right: 20px;
-            top: 15px;
-            font-size: 28px;
-            font-weight: bold;
-            color: #aaa;
-            cursor: pointer;
-            background: white;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            text-align: center;
-            line-height: 35px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        .close:hover {
-            color: black;
-        }
-        .modal-body ul {
-            padding-left: 20px;
-        }
-        .btn-wa {
-            background-color: #25D366; /* Hijau WhatsApp */
-            margin-top: 20px;
-        }
-        .btn-wa:hover {
-            background-color: #1ebe57;
-        }
+       /* Review Section */
+       .review-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+           gap: 20px;
+       }
+       .review-item {
+           background: var(--white);
+           padding: 25px;
+           border-radius: 10px;
+           box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+           position: relative;
+       }
+       .review-item::before {
+           content: "“";
+           font-size: 4rem;
+           color: #eee;
+           position: absolute;
+           top: -10px;
+           left: 20px;
+           font-family: serif;
+       }
+       .review-item p {
+           font-style: italic;
+           position: relative;
+           z-index: 1;
+           color: #444;
+       }
+       .review-item strong {
+           display: block;
+           margin-top: 15px;
+           color: var(--primary-color);
+       }
 
-        /* Floating WhatsApp Button */
-        .float-wa {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
-    </style>
+       /* FAQ Accordion Section */
+       .faq-container {
+           max-width: 800px;
+           margin: 0 auto;
+       }
+       .accordion {
+           background-color: var(--white);
+           color: #333;
+           cursor: pointer;
+           padding: 18px;
+           width: 100%;
+           border: none;
+           text-align: left;
+           outline: none;
+           font-size: 1.1rem;
+           font-weight: 600;
+           transition: 0.4s;
+           border-bottom: 1px solid #ddd;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+       }
+       .accordion:first-child {
+           border-top-left-radius: 8px;
+           border-top-right-radius: 8px;
+       }
+       .accordion.active, .accordion:hover {
+           background-color: #f1f5f9;
+       }
+       .accordion::after {
+           content: '\002B'; /* Plus icon */
+           font-size: 1.5rem;
+           color: #777;
+           float: right;
+           margin-left: 5px;
+       }
+       .accordion.active::after {
+           content: "\2212"; /* Minus icon */
+       }
+       .panel {
+           padding: 0 18px;
+           background-color: white;
+           max-height: 0;
+           overflow: hidden;
+           transition: max-height 0.2s ease-out;
+           color: #555;
+           border-bottom: 1px solid #ddd;
+       }
+
+       /* Modal (Pop-up Detail Paket) */
+       .modal {
+           display: none;
+           position: fixed;
+           z-index: 1000;
+           left: 0; top: 0;
+           width: 100%; height: 100%;
+           background-color: rgba(0,0,0,0.7);
+           backdrop-filter: blur(5px);
+           overflow: auto;
+       }
+       .modal-content {
+           background-color: var(--white);
+           margin: 3% auto;
+           border-radius: 12px;
+           width: 90%;
+           max-width: 750px;
+           position: relative;
+           max-height: 90vh;
+           overflow-y: auto;
+           box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+           animation: modalFadeIn 0.3s;
+       }
+       @keyframes modalFadeIn {
+           from {opacity: 0; transform: translateY(-20px);}
+           to {opacity: 1; transform: translateY(0);}
+       }
+       
+       /* Gambar Header di Modal */
+       .modal-header-img {
+           width: 100%;
+           height: 250px;
+           object-fit: cover;
+           border-top-left-radius: 12px;
+           border-top-right-radius: 12px;
+           display: block;
+       }
+       
+       .modal-body {
+           padding: 30px;
+       }
+       
+       .close {
+           position: absolute;
+           right: 15px;
+           top: 15px;
+           font-size: 24px;
+           font-weight: bold;
+           color: #333;
+           cursor: pointer;
+           background: rgba(255,255,255,0.8);
+           border-radius: 50%;
+           width: 36px;
+           height: 36px;
+           text-align: center;
+           line-height: 36px;
+           z-index: 10;
+           transition: background 0.3s;
+       }
+       .close:hover {
+           background: white;
+           color: black;
+       }
+
+       /* ITINERARY STEPPER (Timeline Harian) */
+       .timeline {
+           border-left: 3px solid var(--primary-color);
+           padding-left: 20px;
+           margin: 25px 0;
+       }
+       .timeline-item {
+           position: relative;
+           margin-bottom: 20px;
+       }
+       .timeline-item::before {
+           content: '';
+           position: absolute;
+           width: 15px;
+           height: 15px;
+           background: var(--primary-color);
+           border-radius: 50%;
+           left: -29px; /* Posisi bulatan di garis */
+           top: 5px;
+           border: 3px solid white;
+       }
+       .timeline-item h4 {
+           margin: 0 0 5px 0;
+           color: var(--primary-color);
+           font-size: 1.1rem;
+       }
+       .timeline-item p {
+           margin: 0;
+           font-size: 0.95rem;
+           color: #555;
+       }
+
+       .btn-wa {
+           background-color: #25D366;
+           margin-top: 25px;
+           font-size: 1.1rem;
+           padding: 15px;
+           border-radius: 8px;
+           box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);
+       }
+       .btn-wa:hover {
+           background-color: #1ebe57;
+           transform: translateY(-2px);
+       }
+       .urgency-text {
+           text-align: center;
+           color: #e53935;
+           font-size: 0.9rem;
+           margin-top: 10px;
+           font-weight: 600;
+       }
+
+       /* Floating WhatsApp Button */
+       .float-wa {
+           position: fixed;
+           width: 60px;
+           height: 60px;
+           bottom: 30px;
+           right: 30px;
+           background-color: #25d366;
+           color: #FFF;
+           border-radius: 50px;
+           text-align: center;
+           font-size: 30px;
+           box-shadow: 2px 4px 12px rgba(0,0,0,0.25);
+           z-index: 100;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           text-decoration: none;
+           transition: transform 0.3s;
+       }
+       .float-wa:hover {
+           transform: scale(1.1);
+       }
+   </style>
 </head>
 <body>
 
-    <header class="hero">
-        <h1>Wujudkan Liburan Impian Tanpa Ribet</h1>
-        <p>Bersama Bintol Travel Agen</p>
-    </header>
+   <!-- HERO SECTION -->
+   <header class="hero">
+       <h1>Mahakarya Perjalanan Menanti Anda</h1>
+       <p>Bintol Travel: Merancang pengalaman autentik ke destinasi paling magis di Nusantara tanpa repot mengurus logistik.</p>
+   </header>
 
-    <div class="container">
-        <h2 class="section-title">Pilih Destinasi Terbaik Anda</h2>
-        <div class="grid">
-            
-            <div class="card">
-                <img src="banda-neira.jpg" alt="Banda Neira Maluku">
-                <div class="card-content">
-                    <h3>Banda Neira 4H4M</h3>
-                    <p>Melarikan diri sejenak ke kepingan surga sejarah di Timur Indonesia.</p>
-                    <button class="btn" onclick="openModal('modalBanda')">Lihat Detail Paket ➔</button>
-                </div>
-            </div>
+   <!-- KATALOG PAKET (Halaman Utama) -->
+   <div class="container">
+       <h2 class="section-title">Eksplorasi Destinasi Premium</h2>
+       <div class="grid">
+           
+           <!-- Card 1: Banda Neira -->
+           <div class="card">
+               <span class="badge-scarcity">🔥 Sisa 4 Kuota Bulan Ini</span>
+               <div class="card-img-wrapper">
+                   <img src="banda-neira.jpg" alt="Banda Neira Maluku">
+               </div>
+               <div class="card-content">
+                   <h3>Banda Neira 4H4M</h3>
+                   <p>Melarikan diri sejenak ke kepingan surga sejarah di Timur Indonesia. Jelajahi Benteng Belgica & laut jernih Hatta.</p>
+                   <button class="btn" onclick="openModal('modalBanda')">Lihat Itinerary & Harga ➔</button>
+               </div>
+           </div>
 
-            <div class="card">
-                <img src="wae-rebo.jpg" alt="Desa Wae Rebo Flores">
-                <div class="card-content">
-                    <h3>Wae Rebo 4H4M</h3>
-                    <p>Perjalanan spiritual dan budaya menyatu dengan alam di "Desa Atas Awan".</p>
-                    <button class="btn" onclick="openModal('modalWae')">Lihat Detail Paket ➔</button>
-                </div>
-            </div>
+           <!-- Card 2: Wae Rebo -->
+           <div class="card">
+               <span class="badge-scarcity">🏕️ Best Seller</span>
+               <div class="card-img-wrapper">
+                   <img src="wae-rebo.jpg" alt="Desa Wae Rebo Flores">
+               </div>
+               <div class="card-content">
+                   <h3>Wae Rebo 4H4M</h3>
+                   <p>Perjalanan spiritual menyatu dengan alam di "Desa Atas Awan" Mbaru Niang. Rasakan kehangatan kopi dan budaya Flores.</p>
+                   <button class="btn" onclick="openModal('modalWae')">Lihat Itinerary & Harga ➔</button>
+               </div>
+           </div>
 
-            <div class="card">
-                <img src="rinjani.jpg" alt="Pemandangan Kawah Rinjani saat Matahari Terbit">
-                <div class="card-content">
-                    <h3>Ekspedisi Rinjani 4H4M</h3>
-                    <p>Taklukkan batas diri dan saksikan mahakarya Sang Pencipta dari ketinggian.</p>
-                    <button class="btn" onclick="openModal('modalRinjani')">Lihat Detail Paket ➔</button>
-                </div>
-            </div>
+           <!-- Card 3: Rinjani -->
+           <div class="card">
+               <span class="badge-scarcity">⭐ Luxury Glamping</span>
+               <div class="card-img-wrapper">
+                   <img src="rinjani.jpg" alt="Pemandangan Kawah Rinjani">
+               </div>
+               <div class="card-content">
+                   <h3>Ekspedisi Rinjani 4H4M</h3>
+                   <p>Taklukkan batas diri menuju Segara Anak dengan layanan Glamping mewah. Fokus melangkah, logistik kami yang urus.</p>
+                   <button class="btn" onclick="openModal('modalRinjani')">Lihat Itinerary & Harga ➔</button>
+               </div>
+           </div>
 
-        </div>
-    </div>
+       </div>
+   </div>
 
-    <div class="container" style="margin-top: 60px;">
-        <h2 class="section-title">Cerita Mereka Bersama Kami</h2>
-        <div class="review-grid">
-            <div class="review-item">
-                <p>"Banda Neira sungguh magis! Guide Bintol Travel sangat informatif dan pelayanannya juara."</p>
-                <strong>- Rina M.</strong>
-            </div>
-            <div class="review-item">
-                <p>"Pengalaman di Wae Rebo tidak terlupakan. Transportasi nyaman dan diurus sampai tuntas."</p>
-                <strong>- Budi S.</strong>
-            </div>
-            <div class="review-item">
-                <p>"Rinjani terasa mudah berkat tim porter dan glamping dari Bintol. Recommended!"</p>
-                <strong>- Anton K.</strong>
-            </div>
-        </div>
-    </div>
+   <!-- REVIEW SECTION (SOCIAL PROOF) -->
+   <div class="container" style="margin-top: 80px; margin-bottom: 60px;">
+       <h2 class="section-title">Dipercaya Ratusan Pejalan Setia</h2>
+       <div class="review-grid">
+           <div class="review-item">
+               <p>Awalnya ragu bawa keluarga ke Banda Neira, ternyata Bintol ngurusin semua dari A-Z. Guide-nya bukan cuma anter, tapi bisa cerita sejarah panjang lebar. Luar biasa!</p>
+               <strong>- Rina M. (Family Trip)</strong>
+           </div>
+           <div class="review-item">
+               <p>Trekking ke Wae Rebo terasa ringan berkat tim porter Bintol yang sigap. Menginap di Mbaru Niang adalah pengalaman paling zen yang pernah saya rasakan.</p>
+               <strong>- Budi S. (Solo Traveler)</strong>
+           </div>
+           <div class="review-item">
+               <p>Penyajian makanan di Gunung Rinjani gila banget, di atas 3000 mdpl masih bisa makan hangat dan enak. Tenda glamping-nya bikin tidur nyenyak. Highly recommended!</p>
+               <strong>- Anton K. & Tim (Open Trip)</strong>
+           </div>
+       </div>
+   </div>
 
-    <div id="modalBanda" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalBanda')">&times;</span>
-            <h2>Banda Neira 4H4M</h2>
-            <div class="modal-body">
-                <img src="banda-neira.jpg" alt="Banda Neira Maluku" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
-                
-                <p>Pernahkah Anda membayangkan bangun pagi disambut udara segar, laut sebening kristal, dan deretan bangunan kolonial yang menyimpan ribuan cerita? Selama 4 hari 4 malam, kami akan membawa Anda menyelami pesona bawah laut yang tak tertandingi dan menyusuri jejak sejarah rempah dunia.</p>
-                <h3>✨ Benefit yang Anda Dapatkan:</h3>
-                <ul>
-                    <li>Akomodasi Nyaman 4 Malam (Penginapan heritage).</li>
-                    <li>Tiket kapal cepat Ambon-Banda (PP) & transportasi lokal.</li>
-                    <li>Island Hopping & Snorkeling (Pulau Hatta & Rhun).</li>
-                    <li>Tur Sejarah (Benteng Belgica, Rumah Pengasingan).</li>
-                    <li>Konsumsi hidangan seafood khas Banda.</li>
-                </ul>
-                <a href="https://wa.me/6287778003084?text=Halo%20admin%20Bintol%20Travel,%20saya%20tertarik%20dengan%20paket%20Banda%20Neira%204H4M." target="_blank" class="btn btn-wa">Tanya Jadwal & Booking via WhatsApp</a>
-            </div>
-        </div>
-    </div>
+   <!-- FAQ SECTION (KONVERSI & KEPERCAYAAN) -->
+   <div class="container" style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 80px;">
+       <h2 class="section-title" style="margin-bottom: 30px;">Pertanyaan yang Sering Diajukan</h2>
+       <div class="faq-container">
+           
+           <button class="accordion">Apakah harga sudah termasuk tiket pesawat dari Jakarta?</button>
+           <div class="panel">
+               <p style="padding: 10px 0;">Harga paket yang tertera adalah *Land Tour* (titik temu/meeting point di bandara kedatangan lokal). Namun, tim Admin kami sangat siap membantu memesankan tiket pesawat PP dari kota asal Anda dengan harga transparan jika dibutuhkan.</p>
+           </div>
 
-    <div id="modalWae" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalWae')">&times;</span>
-            <h2>Wae Rebo 4H4M</h2>
-            <div class="modal-body">
-                <img src="wae-rebo.jpg" alt="Desa Wae Rebo Flores" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
-                
-                <p>Tersembunyi di balik pegunungan hijau Flores, Wae Rebo menawarkan ketenangan yang sulit dicari di tempat lain. Hirup udara segar pegunungan, rasakan kehangatan sambutan masyarakat lokal di rumah adat Mbaru Niang, dan nikmati secangkir kopi asli Flores di bawah taburan bintang.</p>
-                <h3>✨ Benefit yang Anda Dapatkan:</h3>
-                <ul>
-                    <li>Transportasi Darat Premium (Bandara/Hotel - Denge PP).</li>
-                    <li>1 Malam di Mbaru Niang + 3 Malam di hotel area Labuan Bajo/Ruteng.</li>
-                    <li>Local guide ramah & porter barang.</li>
-                    <li>Upacara Adat Waelu.</li>
-                    <li>Konsumsi lezat selama di desa dan air mineral tak terbatas.</li>
-                </ul>
-                <a href="https://wa.me/6287778003084?text=Halo%20admin%20Bintol%20Travel,%20saya%20tertarik%20dengan%20paket%20Wae%20Rebo%204H4M." target="_blank" class="btn btn-wa">Tanya Jadwal & Booking via WhatsApp</a>
-            </div>
-        </div>
-    </div>
+           <button class="accordion">Saya belum pernah naik gunung, apakah aman ikut Rinjani?</button>
+           <div class="panel">
+               <p style="padding: 10px 0;">Sangat aman. Paket kami didesain dengan ritme jalan yang santai. Guide bersertifikat kami akan menyesuaikan kecepatan dengan fisik peserta. Fasilitas glamping dan porter kami pastikan membuat Anda tidak perlu memikul beban berat.</p>
+           </div>
 
-    <div id="modalRinjani" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalRinjani')">&times;</span>
-            <h2>Ekspedisi Rinjani 4H4M</h2>
-            <div class="modal-body">
-                <img src="rinjani.jpg" alt="Pemandangan Kawah Rinjani saat Matahari Terbit" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;">
-                
-                <p>Bersama tim profesional kami, wujudkan impian menjejakkan kaki di 3.726 mdpl tanpa pusing memikirkan logistik. Fokus pada langkah dan keindahan alamnya; biarkan kami yang mengurus tenda, makanan hangat, dan kenyamanan Anda di atas awan.</p>
-                
-                <h3>✨ Benefit yang Anda Dapatkan:</h3>
-                <ul>
-                    <li>Fasilitas Glamping (Tenda double layer, sleeping bag, matras).</li>
-                    <li>Pemandu gunung bersertifikat & tim porter.</li>
-                    <li>3x makan sehari (menu bergizi, buah, camilan di gunung).</li>
-                    <li>1 Malam penginapan transisi di Sembalun/Senaru.</li>
-                    <li>Tiket TNGR, asuransi, dan perlengkapan P3K.</li>
-                </ul>
-                <a href="https://wa.me/6287778003084?text=Halo%20admin%20Bintol%20Travel,%20saya%20tertarik%20dengan%20paket%20Rinjani%204H4M." target="_blank" class="btn btn-wa">Tanya Jadwal & Booking via WhatsApp</a>
-            </div>
-        </div>
-    </div>
+           <button class="accordion">Bagaimana sistem pembayarannya?</button>
+           <div class="panel">
+               <p style="padding: 10px 0;">Anda cukup membayar Uang Muka (DP) sebesar 30% untuk mengamankan kuota dan akomodasi. Pelunasan dapat dilakukan maksimal H-7 sebelum keberangkatan demi kenyamanan bersama.</p>
+           </div>
 
-    <a href="https://wa.me/6287778003084?text=Halo%20admin%20Bintol%20Travel,%20saya%20ingin%20tanya-tanya%20seputar%20paket%20wisata." target="_blank" class="float-wa">
-        💬
-    </a>
+       </div>
+   </div>
 
-    <script>
-        // Fungsi untuk membuka modal
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = "block";
-        }
+   <!-- MODALS (Detail Paket dengan Itinerary Stepper) -->
+   
+   <!-- Modal Banda Neira -->
+   <div id="modalBanda" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal('modalBanda')">×</span>
+           <img src="banda-neira.jpg" alt="Banda Neira" class="modal-header-img">
+           
+           <div class="modal-body">
+               <h2>Banda Neira 4 Hari 4 Malam</h2>
+               <p style="font-size: 1.1rem; color: #444;">Jelajahi jejak sejarah rempah dunia, susuri Benteng Belgica, dan nikmati snorkeling eksklusif di perairan paling jernih di Timur Indonesia.</p>
+               
+               <h3>📍 Rencana Perjalanan (Itinerary)</h3>
+               <div class="timeline">
+                   <div class="timeline-item">
+                       <h4>Hari 1: Selamat Datang di Banda</h4>
+                       <p>Penjemputan di Pelabuhan/Bandara Ambon, menyeberang via kapal cepat ke Banda Neira. Check-in penginapan *Heritage* dan menikmati senja lokal.</p>
+                   </div>
+                   <div class="timeline-item">
+                       <h4>Hari 2: Eksplorasi Sejarah</h4>
+                       <p>Mengunjungi Benteng Belgica (spot foto uang Rp 1.000), Rumah Pengasingan Bung Hatta, dan Istana Mini. Sore menikmati kuliner laut lokal.</p>
+                   </div>
+                   <div class="timeline-item">
+                       <h4>Hari 3: Island Hopping & Snorkeling</h4>
+                       <p>Menjelajah Pulau Hatta dan Pulau Rhun. Snorkeling menikmati keindahan karang vulkanik di area *Lava Flow* dengan kapal pribadi.</p>
+                   </div>
+                   <div class="timeline-item">
+                       <h4>Hari 4: Sayonara</h4>
+                       <p>Membeli oleh-oleh khas pala Banda, penyeberangan kembali ke Ambon, dan pengantaran ke bandara.</p>
+                   </div>
+               </div>
 
-        // Fungsi untuk menutup modal
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-        }
+               <ul style="background: #f9f9f9; padding: 20px 20px 20px 40px; border-radius: 8px;">
+                   <li><strong>Termasuk:</strong> Penginapan 4M, Kapal Cepat PP Ambon-Banda, Makan (P/S/M), Guide Lisensi, Alat Snorkeling, Tiket Wisata.</li>
+               </ul>
+               
+               <a href="https://wa.me/6287778003084?text=Halo%20Admin%20Bintol%20Travel,%20saya%20tertarik%20mengamankan%20sisa%20kuota%20paket%20*Banda%20Neira%204H4M*.%20Boleh%20minta%20info%20jadwal%20dan%20harga?" target="_blank" class="btn btn-wa">Amankan Kuota Saya Sekarang ➔</a>
+               <p class="urgency-text">*Hanya tersisa 4 seat untuk pendaftaran minggu ini.</p>
+           </div>
+       </div>
+   </div>
 
-        // Menutup modal jika user mengklik di luar area kotak putih
-        window.onclick = function(event) {
-            if (event.target.classList.contains("modal")) {
-                event.target.style.display = "none";
-            }
-        }
-    </script>
+   <!-- Modal Wae Rebo -->
+   <div id="modalWae" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal('modalWae')">×</span>
+           <img src="wae-rebo.jpg" alt="Wae Rebo" class="modal-header-img">
+           
+           <div class="modal-body">
+               <h2>Wae Rebo 4 Hari 4 Malam</h2>
+               <p style="font-size: 1.1rem; color: #444;">Perjalanan spiritual menuju desa di atas awan. Rasakan kehangatan warga lokal di rumah adat Mbaru Niang di tengah heningnya alam Flores.</p>
+               
+               <h3>📍 Rencana Perjalanan (Itinerary)</h3>
+               <div class="timeline">
+                   <div class="timeline-item">
+                       <h4>Hari 1: Tiba di Labuan Bajo / Ruteng</h4>
+                       <p>Penjemputan di bandara, check-in hotel area Labuan Bajo/Ruteng untuk persiapan trekking esok hari.</p>
+                   </div>
+                   <div class="timeline-item">
+                       <h4>Hari 2: Perjalanan ke Denge & Trekking</h4>
+                       <p>Pagi hari menuju Desa Denge. Siang hari mulai trekking ringan (2-3 jam) ke Wae Rebo bersama porter lokal. Disambut dengan Upacara Adat Waelu.</p>
+                   </div>
+                   <div class="timeline-item">
+                       <h4>Hari 3: Morning at Mbaru Niang</h4>
+                       <p>Menikmati sunrise dan kopi Flores di desa. Interaksi dengan warga, lalu turun kembali ke Denge dan bermalam di hotel area Ruteng/Bajo.</p>
+                   </div>
+                   <div class="timeline-item">
+                       <h4>Hari 4: Kepulangan</h4>
+                       <p>Membeli suvenir kain tenun khas Manggarai dan pengantaran kembali ke bandara.</p>
+                   </div>
+               </div>
+
+               <ul style="background: #f9f9f9; padding: 20px 20px 20px 40px; border-radius: 8px;">
+                   <li><strong>Termasuk:</strong> Mobil Premium, 1M Mbaru Niang + 3M Hotel, Makan Full Board, Porter & Guide Lokal, Biaya Upacara Adat.</li>
+               </ul>
+               
+               <a href="https://wa.me/6287778003084?text=Halo%20Admin%20Bintol%20Travel,%20saya%20tertarik%20dengan%20paket%20Best%20Seller%20*Wae%20Rebo%204H4M*.%20Boleh%20minta%20info%20jadwal%20keberangkatan?" target="_blank" class="btn btn-wa">Tanya Jadwal Keberangkatan ➔</a>
+           </div>
+       </div>
+   </div>
+
+   <!-- Modal Rinjani -->
+   <div id="modalRinjani" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal('modalRinjani')">×</span>
+           <img src="rinjani.jpg" alt="Rinjani" class="modal-header-img">
+           
+           <div class="modal-body">
+               <h2>Ekspedisi Rinjani 4 Hari 4 Malam</h2>
+               <p style="font-size: 1.1rem; color: #444;">Fokus menjejakkan kaki di 3.726 mdpl tanpa repot memikirkan logistik. Layanan Glamping kami memastikan Anda tidur nyaman dan makan enak di atas awan.</p>
+               
+               <h3>📍 Rencana Perjalanan (Itinerary)</h3>
+               <div class="timeline">
+                   <div class="timeline-item">
+                       <h4>Hari 1: Persiapan di Kaki Gunung</h4>
+                       <p>Penjemputan di Bandara Lombok, check-in penginapan transisi di Desa Sembalun/Senaru. Briefing pendakian bersama lead guide.</p>
+                   </div>
+                   <div class="timeline-item">
+                       <h4>Hari 2: Trekking to Plawangan</h4>
+                       <p>Mulai pendakian. Makan siang bergizi di pos, lalu lanjut hingga camp Plawangan Sembalun. Tenda luxury sudah disiapkan porter, nikmati sunset.</p>
+                   </div>
+                   <div class="timeline-item">
+                       <h4>Hari 3: Summit Attack & Segara Anak</h4>
+                       <p>Dini hari menuju Puncak 3.726 mdpl. Turun ke Danau Segara Anak, menikmati pemandian air panas alami. (Opsi bermalam di danau atau kembali ke pos awal).</p>
+                   </div>
+                   <div class="timeline-item">
+                       <h4>Hari 4: Turun & Sayonara</h4>
+                       <p>Turun gunung via jalur Senaru/Sembalun. Pengantaran kembali ke Bandara Lombok atau Pelabuhan.</p>
+                   </div>
+               </div>
+
+               <ul style="background: #f9f9f9; padding: 20px 20px 20px 40px; border-radius: 8px;">
+                   <li><strong>Termasuk:</strong> Tenda Double Layer (Glamping), Matras & Sleeping Bag, Tim Porter Masak, Makan 3x Sehari, Tiket TNGR & Asuransi, 1M Hotel Transisi.</li>
+               </ul>
+               
+               <a href="https://wa.me/6287778003084?text=Halo%20Admin%20Bintol%20Travel,%20saya%20tertarik%20dengan%20paket%20Luxury%20*Ekspedisi%20Rinjani%204H4M*.%20Apakah%20masih%20ada%20slot?" target="_blank" class="btn btn-wa">Cek Ketersediaan Slot ➔</a>
+           </div>
+       </div>
+   </div>
+
+   <!-- FLOATING WHATSAPP BUTTON -->
+   <a href="https://wa.me/6287778003084?text=Halo%20Bintol%20Travel,%20saya%20sedang%20melihat%20website%20dan%20ingin%20konsultasi%20rencana%20liburan%20saya." target="_blank" class="float-wa" aria-label="Chat WhatsApp Admin">
+       <span style="font-size: 1.5rem;">💬</span>
+   </a>
+
+   <!-- JAVASCRIPT UNTUK MODAL & ACCORDION FAQ -->
+   <script>
+       // --- Script untuk Modal Pop-up ---
+       function openModal(modalId) {
+           document.getElementById(modalId).style.display = "block";
+           document.body.style.overflow = "hidden"; // Mencegah scroll background
+       }
+
+       function closeModal(modalId) {
+           document.getElementById(modalId).style.display = "none";
+           document.body.style.overflow = "auto"; // Mengembalikan scroll
+       }
+
+       window.onclick = function(event) {
+           if (event.target.classList.contains("modal")) {
+               event.target.style.display = "none";
+               document.body.style.overflow = "auto";
+           }
+       }
+
+       // --- Script untuk FAQ Accordion ---
+       var acc = document.getElementsByClassName("accordion");
+       var i;
+
+       for (i = 0; i < acc.length; i++) {
+           acc[i].addEventListener("click", function() {
+               this.classList.toggle("active");
+               var panel = this.nextElementSibling;
+               if (panel.style.maxHeight) {
+                   panel.style.maxHeight = null;
+               } else {
+                   panel.style.maxHeight = panel.scrollHeight + "px";
+               }
+           });
+       }
+   </script>
 </body>
 </html>
